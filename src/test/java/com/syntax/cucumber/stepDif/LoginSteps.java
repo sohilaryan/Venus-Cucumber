@@ -1,4 +1,4 @@
-package com.syntax.cucumber.stepDifinitions;
+package com.syntax.cucumber.stepDif;
 
 import static org.testng.Assert.assertEquals;
 
@@ -28,15 +28,16 @@ public class LoginSteps {
 
 	@Given("^I navigate to FreeCrm$")
 	public void i_navigate_to_FreeCrm() throws Throwable {
-		driver.get("https://www.freecrm.com/index.html");
+		driver.get("https://www.freecrm.com/");
 
 	}
 
-	@When("^I enter valid username and password$")
-	public void i_enter_valid_username_and_password() throws Throwable {
-		driver.findElement(By.name("username")).sendKeys("sohilaryan");
-		driver.findElement(By.name("password")).sendKeys("Afghan@123");
+	@When("^I enter \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void i_enter_and(String uName, String password) throws Throwable {
+		driver.findElement(By.name("username")).sendKeys(uName);
+		driver.findElement(By.name("password")).sendKeys(password);
 	}
+	
 
 	@When("^I click login button$")
 	public void i_click_login_button() throws Throwable {
@@ -53,13 +54,6 @@ public class LoginSteps {
 
 	}
 
-	@When("^I enter invalid username and password$")
-	public void i_enter_invalid_username_and_password() throws Throwable {
-		driver.findElement(By.name("username")).sendKeys("AAAAAAAAa");
-		driver.findElement(By.name("password")).sendKeys("BBBBBBB@123");
-
-	}
-
 	@Then("^I see error message$")
 	public void i_see_error_message() throws Throwable {
 
@@ -69,4 +63,11 @@ public class LoginSteps {
 		driver.quit();
 	}
 
+//	@When("^I enter valid username and invalid password$")
+//	public void i_enter_valid_username_and_invalid_password() throws Throwable {
+//
+//		driver.findElement(By.name("username")).sendKeys("sohilaryan");
+//		driver.findElement(By.name("password")).sendKeys("BBBBBBB@123");
+//
+//	}
 }

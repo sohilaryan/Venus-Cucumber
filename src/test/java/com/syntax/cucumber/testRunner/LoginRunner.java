@@ -7,8 +7,10 @@ import cucumber.api.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/resources/features/Loing.feature",
-glue="com.syntax.cucumber.stepDifinitions")
+@CucumberOptions(plugin= {"pretty","html:target/report-test"},features= {"src/test/resources/features/Login.feature"}
+	,glue= "com.syntax.cucumber.stepDifinitions"
+	,dryRun=false
+	,monochrome=true)
 
 
 public class LoginRunner {
