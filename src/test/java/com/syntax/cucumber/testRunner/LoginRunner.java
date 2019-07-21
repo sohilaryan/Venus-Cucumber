@@ -7,10 +7,11 @@ import cucumber.api.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin= {"pretty","html:target/report-test"},features= {"src/test/resources/features/Login.feature"}
+@CucumberOptions(plugin= {"progress"},features= {"src/test/resources/features/Login.feature"}
 	,glue= "com.syntax.cucumber.stepDifinitions"
 	,dryRun=false
-	,monochrome=true)
+	,monochrome=true
+	,strict=true)
 
 
 public class LoginRunner {

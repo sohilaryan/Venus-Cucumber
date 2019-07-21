@@ -29,7 +29,7 @@
 				<version>3.0.0-M1</version>
 				<configuration>
 					<includes>
-					<include>com.syntax.cucumber.testRunner.LoginRunner.java</include>
+					<include>com.syntax.cucumber.testRunner.signUpTestRunner</include>
 					</includes>
 				</configuration>
 			</plugin>
@@ -59,6 +59,10 @@
 	</build>
 
 	<dependencies>
+	
+	
+<!-- https://mvnrepository.com/artifact/com.hynnet/oracle-driver-ojdbc -->
+
 
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>

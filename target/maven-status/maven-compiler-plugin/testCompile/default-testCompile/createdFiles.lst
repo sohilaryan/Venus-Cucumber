@@ -1,2 +1,6 @@
+com/syntax/cucumber/stepDif/signUpWithDTtest.class
+com/syntax/cucumber/stepDif/LoginSteps.class
 com/syntax/cucumber/testRunner/LoginRunner.class
-com/syntax/cucumber/stepDifinitions/LoginSteps.class
+com/utils/BaseClass.class
+com/syntax/cucumber/testRunner/signUpTestRunner.class
+com/syntax/cucumber/stepDif/JdbcConictivity.class

@@ -17,21 +17,17 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class signUpWithDTtest extends BaseClass {
+public class signUpWithDTtest extends BaseClass{
 
-	@Given("^I open browser$")
+	@Given("^I open the browser$")
 	public void i_open_browser() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "/Users/SohilAryan/Documents/JARFiles/Drivers/chromedriver");
-		driver = new ChromeDriver();
-
-		driver.manage().window().fullscreen();
-		driver.manage().timeouts().pageLoadTimeout(12, TimeUnit.SECONDS);
+		
 
 	}
 	
 	@Given("^I navigate to the FreeCrm$")
 	public void i_navigate_to_the_FreeCrm() throws Throwable {
-		driver.get("https://www.freecrm.com/");
+	
 		
 		
 	}
@@ -39,7 +35,7 @@ public class signUpWithDTtest extends BaseClass {
 
 	@And("^I click on signUp button$")
 	public void i_click_on_SignUp() throws Throwable {
-		WebElement signUp = driver.findElement(By.linkText("Sign Up"));
+		WebElement signUp = driver.findElement(By.xpath("/html/body/div[1]/main/section[1]/a"));
 		JavascriptExecutor js= (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", signUp);
 	}
@@ -47,6 +43,9 @@ public class signUpWithDTtest extends BaseClass {
 	
 	@When("^I provide the following details$")
 	public void i_provide_the_following_details(DataTable  getData) throws Throwable {
+		
+		
+		
 	 for(Map<String, String> data : getData.asMaps(String.class, String.class)) {
 		Thread.sleep(2000);
 		WebElement drop = driver.findElement(By.xpath("//select[@id='payment_plan_id']"));
@@ -87,6 +86,6 @@ public class signUpWithDTtest extends BaseClass {
 	}
 	@Then("^I close broswer$")
 	public void i_close_broswer() throws Throwable {
-		driver.close();
+		
 	}
 }

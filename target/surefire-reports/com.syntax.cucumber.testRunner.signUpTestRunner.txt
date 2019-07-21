@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.syntax.cucumber.testRunner.signUpTestRunner
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.593 s - in com.syntax.cucumber.testRunner.signUpTestRunner
