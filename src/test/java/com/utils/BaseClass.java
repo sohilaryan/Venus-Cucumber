@@ -12,7 +12,7 @@ public class BaseClass {
 	
 	
 	public static void setUp() {
-		System.setProperty("webdriver.chrome.driver", "/Users/SohilAryan/Documents/JARFiles/Drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver");
 		driver = new ChromeDriver();
 		
 		driver.manage().window().fullscreen();

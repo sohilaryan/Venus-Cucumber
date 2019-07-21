@@ -13,7 +13,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 5147163437,
+  "duration": 5056839322,
   "status": "passed"
 });
 formatter.scenario({
@@ -43,26 +43,26 @@ formatter.match({
   "location": "signUpWithDTtest.i_open_browser()"
 });
 formatter.result({
-  "duration": 142621078,
+  "duration": 190310206,
   "status": "passed"
 });
 formatter.match({
   "location": "signUpWithDTtest.i_navigate_to_the_FreeCrm()"
 });
 formatter.result({
-  "duration": 23175,
+  "duration": 41629,
   "status": "passed"
 });
 formatter.match({
   "location": "signUpWithDTtest.i_close_broswer()"
 });
 formatter.result({
-  "duration": 17462,
+  "duration": 28809,
   "status": "passed"
 });
 formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 1400734430,
+  "duration": 1343046312,
   "status": "passed"
 });
 });
